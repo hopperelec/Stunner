@@ -1,0 +1,22 @@
+name: Stunner
+version: ${project.version}
+main: uk.co.hopperlec.mc.stun.Main
+api-version: 1.16
+prefix: Stunner
+load: STARTUP
+authors: [HopperElecYT]
+description: Allows server staff to lock players in place for many reasons, and allows plugin developers to to use stunning in other cases
+website: hopperelec.co.uk
+
+commands:
+  stun:
+    description: Stun (player) for (seconds) seconds for (reason)
+  unstun:
+    description: Stop an ongoing stun on a player
+
+permissions:
+  hopperstunner.*:
+    description: All implementation of stun
+    children: hopperstunner.stun
+  hopperstunner.stun:
+    description: Allows stunning of players
